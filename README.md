@@ -28,3 +28,5 @@
 Durante o desenvolvimento local (no VS Code com Live Server, endereço `http://localhost:5500`), o navegador bloqueia requisições diretas para a CoinGecko API por causa da política de **CORS** (Cross-Origin Resource Sharing).
 
 A CoinGecko não envia o header `Access-Control-Allow-Origin` permitindo origens localhost, o que é uma prática comum em APIs públicas para evitar abuso.
+
+https://rony0112.github.io/Crypto-Price_-/
