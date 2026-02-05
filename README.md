@@ -29,4 +29,6 @@ Durante o desenvolvimento local (no VS Code com Live Server, endereço `http://l
 
 A CoinGecko não envia o header `Access-Control-Allow-Origin` permitindo origens localhost, o que é uma prática comum em APIs públicas para evitar abuso.
 
+🌐 Visualize o projeto:
+
 https://rony0112.github.io/Crypto-Price_-/
