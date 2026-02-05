@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Price</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Crypto Price</h1>
+        <p>Preços em tempo real via CoinGecko API</p>
+    </header>
+
+    <div class="container">
+        <div class="loading">Carregando preços...</div>
+    </div>
+
+    <button id="refreshBtn">
+        <span id="btnText">Atualizar Agora</span>
+        <span id="btnSpinner" class="spinner hidden"></span>
+    </button>
+
+    <script src="index.js"></script>
+</body>
+</html>

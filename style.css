@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0f0f17;
+    color: #e0e0ff;
+    font-family: 'Inter', sans-serif;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #a78bfa, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.coin {
+    display: flex;
+    align-items: center;
+    background: #1a1b2e;
+    border-radius: 16px;
+    padding: 16px 20px;
+    transition: all 0.25s ease;
+    border: 1px solid rgba(139, 92, 246, 0.08);
+}
+
+.coin:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    border-color: rgba(139, 92, 246, 0.2);
+}
+
+.coin-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(139, 92, 246, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.coin-logo img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.coin-info {
+    flex: 1;
+}
+
+.coin-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.coin-symbol {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.coin-price-info {
+    text-align: right;
+}
+
+.coin-price {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.coin-change {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.coin-change.positive { color: #22c55e; }
+.coin-change.negative { color: #ef4444; }
+
+.loading {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 60px 0;
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+#refreshBtn {
+    margin-top: 32px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #7c3aed, #a78bfa);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+}
+
+#refreshBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(124, 58, 237, 0.5);
+}
+
+@media (max-width: 600px) {
+    .coin {
+        padding: 14px 16px;
+    }
+    .coin-logo {
+        width: 48px;
+        height: 48px;
+        margin-right: 12px;
+    }
+    .coin-price {
+        font-size: 1.2rem;
+    }
+}
+
+/* Botão com feedback de clique */
+#refreshBtn {
+    margin-top: 32px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #7c3aed, #a78bfa);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#refreshBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(124, 58, 237, 0.5);
+}
+
+#refreshBtn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(124, 58, 237, 0.4);
+    background: linear-gradient(135deg, #6d28d9, #9333ea);
+}
+
+/* Spinner dentro do botão */
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
