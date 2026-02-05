@@ -22,7 +22,7 @@
    - Preço formatado (com duas casas decimais)
    - Variação 24h com cor verde (alta) ou vermelha (baixa)
 5. Atualização automática a cada 5 minutos + botão manual "Atualizar Agora" com feedback visual (spinner + texto "Atualizando...")
-6. 
+
 ### Por que usamos um proxy CORS?
 
 Durante o desenvolvimento local (no VS Code com Live Server, endereço `http://localhost:5500`), o navegador bloqueia requisições diretas para a CoinGecko API por causa da política de **CORS** (Cross-Origin Resource Sharing).
